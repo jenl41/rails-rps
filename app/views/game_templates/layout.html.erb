@@ -1,0 +1,30 @@
+<!-- app/views/layouts/rps.html.erb -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails RPS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div>
+      <%= link_to "Play Rock", rock_path %>
+    </div>
+
+    <div>
+      <%= link_to "Play Paper", paper_path %>
+    </div>
+
+    <div>
+      <%= link_to "Play Scissors", scissors_path %>
+    </div>
+
+    <%= yield %>
+  </body>
+</html>
